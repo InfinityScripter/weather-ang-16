@@ -7,8 +7,9 @@
   .app-container {
     flex-direction: column;
   }
-
   app-side-bar {
     display: none;
   }
 }
+
+/*# sourceMappingURL=app.component.css.map */

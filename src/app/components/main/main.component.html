@@ -1,0 +1,16 @@
+<div>
+  <form (ngSubmit)="getWeather()">
+    <mat-form-field appearance="fill">
+      <mat-label>Введите название города</mat-label>
+      <input matInput type="text" id="city" [(ngModel)]="city" name="city">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Получить погоду</button>
+  </form>
+</div>
+
+<div *ngIf="weatherData">
+  <h2>Погода в {{ weatherData.name }}</h2>
+  <p>Температура: {{ weatherData.main.temp }}°C</p>
+  <p>Описание: {{ weatherData.weather[0].description }}</p>
+  <img [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'" alt="Weather icon">
+</div>
