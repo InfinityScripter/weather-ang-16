@@ -1,6 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <div class="app-container">
-  <app-side-bar></app-side-bar>
-  <app-main></app-main>
+  <app-side-bar [lastCheckedCities]="mainComponent.lastCheckedCities"></app-side-bar>
+  <app-main #mainComponent></app-main>
 </div>
 <app-footer></app-footer>

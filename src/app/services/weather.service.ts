@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,8 @@ import { Observable } from 'rxjs';
 export class WeatherService {
   private http = inject(HttpClient);
 
-  private apiKey = '06f7b381d6c423fbf50e4ef90a2cb4a2';
-  private apiUrl = 'https://api.openweathermap.org/data/2.5';
+  private apiKey = environment.apiKey;
+  private apiUrl = environment.apiUrl;
 
   // Получение текущей погоды по названию города
   getCurrentWeather(city: string): Observable<any> {

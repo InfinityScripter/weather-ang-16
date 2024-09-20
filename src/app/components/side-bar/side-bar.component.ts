@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { NgFor } from '@angular/common';
@@ -15,5 +15,5 @@ import { NgFor } from '@angular/common';
   ]
 })
 export class SideBarComponent {
-  cities = ['Москва', 'Лондон', 'Париж', 'Нью-Йорк'];
+  @Input() lastCheckedCities: string[] = [];  // Получаем данные из MainComponent
 }
